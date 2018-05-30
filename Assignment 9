@@ -1,0 +1,13 @@
+1. Another name for the stack frame is the activation record. It is the collection of all the data on the stack associated with one subprogram call. It usually consists of the return address, argument variables passed on the stack, local variables, and saved copies of registers modified by the subprogram that need to be restored. 
+
+2. A calling convention is a low-level method for the way in which subroutines receive parameters from the caller and how a result is returned. Interfaces of called code are described by calling conventions. 
+
+3. push ebp and mov ebp, esp are known together as prolog assembly function. it stores the previous base pointer (ebp) and sets the base pointer as it was the top of the stack. All the stack contents are saved down the stack, so the function can push and pop in the stack. 
+
+4. The difference is that in 64 bit you use push rbp instead of push ebp. For 64 you use mov rbp, rsp instead of mov ebp, esp. 
+
+5. The differences between them, are that Microsoft x64 calling convention creates shadowspace on function entry while the system V AMD64 must have all registered that saved manually. 
+
+6 The first 4 parameter will be pushed as follows: a into rcx, b into rdx, c into r8 and d into r9. int e and int f will be pushed on the stack from left to right. 
+
+7. The stack will take the parameters from left to right so the outout would be f,e,d,c,b,a.
