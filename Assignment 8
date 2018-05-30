@@ -1,0 +1,35 @@
+- [ ] Convert this variable to decimal: DWORD  1111 1111 1111 1111 1111 1111 1111 1110
+- [ ] Convert this variable to decimal: SDWORD 1111 1111 1111 1111 1111 1111 1111 1110
+- [ ] Convert this variable to decimal: DWORD  0000 0000 0000 0000 0000 0000 1111 1110
+- [ ] Convert this variable to decimal: SDWORD 0000 0000 0000 0000 0000 0000 1111 1110
+- [ ] Submit this assignment by 4/3/2018 for extra credit	
+
+ExitProcess proto
+WriteInt64 proto
+Crlf proto
+.data
+
+var1 DWORD  11111111111111111111111111111110b
+var2 SDWORD 11111111111111111111111111111110b
+var3 DWORD  00000000000000000000000011111110b
+var4 SDWORD 00000000000000000000000011111110b
+
+.code
+main proc
+	mov rax, 0
+	mov rax, QWORD PTR var1
+	call WriteInt64
+	call Crlf
+	
+	movsxd rax, var2
+	call WriteInt64
+	call Crlf
+	
+	mov rax, 0
+	mov rax, QWORD PTR var3
+	movsxd rax, var4
+	
+	mov ecx, 0
+	call ExitProcess
+main endp
+end
