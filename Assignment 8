@@ -1,8 +1,12 @@
-- [ ] Convert this variable to decimal: DWORD  1111 1111 1111 1111 1111 1111 1111 1110
-- [ ] Convert this variable to decimal: SDWORD 1111 1111 1111 1111 1111 1111 1111 1110
-- [ ] Convert this variable to decimal: DWORD  0000 0000 0000 0000 0000 0000 1111 1110
-- [ ] Convert this variable to decimal: SDWORD 0000 0000 0000 0000 0000 0000 1111 1110
-- [ ] Submit this assignment by 4/3/2018 for extra credit	
+1. DWORD  1111 1111 1111 1111 1111 1111 1111 1110b = 4,294,967,294
+
+2. SDWORD 1111 1111 1111 1111 1111 1111 1111 1110b = -2
+
+3. DWORD  0000 0000 0000 0000 0000 0000 1111 1110b = 254
+
+4. SDWORD 0000 0000 0000 0000 0000 0000 1111 1110b = 254
+
+	
 
 ExitProcess proto
 WriteInt64 proto
